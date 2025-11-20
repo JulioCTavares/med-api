@@ -42,14 +42,16 @@ public class CreateDoctorService {
         doctor.setSpecialty(dto.getSpecialty());
         doctor.setCrm(dto.getCrm());
         doctor.setPhone(dto.getPhone());
-        doctor.setAddress(new Address(
-            dto.getAddress().getNeighborhood(), 
-            dto.getAddress().getStreet(), 
-            dto.getAddress().getNumber(), 
-            dto.getAddress().getCity(), 
-            dto.getAddress().getState(), 
-            dto.getAddress().getZipCode(), 
-            dto.getAddress().getComplement()));
+        if (dto.getAddress() != null) {
+            doctor.setAddress(new Address(
+                dto.getAddress().getNeighborhood(), 
+                dto.getAddress().getStreet(), 
+                dto.getAddress().getNumber(), 
+                dto.getAddress().getCity(), 
+                dto.getAddress().getState(), 
+                dto.getAddress().getZipCode(), 
+                dto.getAddress().getComplement()));
+        }
         return doctor;
     }
 }
