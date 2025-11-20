@@ -1,5 +1,6 @@
 package com.github.julioctavares.study_api.services.doctor;
 
+import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
 
 import com.github.julioctavares.study_api.config.exceptions.EntityAlreadyExistsException;
@@ -32,10 +33,11 @@ public class CreateDoctorService {
         return new DoctorResponseDTO(doctor.getId(), doctor.getName(), doctor.getEmail(), doctor.getSpecialty(), doctor.getCrm(), doctor.getPhone(), doctor.getAddress());
     }
 
-    private Doctor convertToEntity(DoctorRequestDTO dto) {
+    private @NonNull Doctor convertToEntity( DoctorRequestDTO dto) {
         Doctor doctor = new Doctor();
         doctor.setName(dto.getName());
         doctor.setEmail(dto.getEmail());
+        doctor.setPassword(dto.getPassword());
         doctor.setSpecialty(dto.getSpecialty());
         doctor.setCrm(dto.getCrm());
         doctor.setPhone(dto.getPhone());
