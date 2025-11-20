@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import com.github.julioctavares.study_api.config.exceptions.EntityAlreadyExistsException;
 import com.github.julioctavares.study_api.dto.doctor.DoctorRequestDTO;
 import com.github.julioctavares.study_api.dto.doctor.DoctorResponseDTO;
+import com.github.julioctavares.study_api.entities.Address;
 import com.github.julioctavares.study_api.entities.Doctor;
 import com.github.julioctavares.study_api.repositories.DoctorRepository;
 
@@ -41,7 +42,14 @@ public class CreateDoctorService {
         doctor.setSpecialty(dto.getSpecialty());
         doctor.setCrm(dto.getCrm());
         doctor.setPhone(dto.getPhone());
-        doctor.setAddress(dto.getAddress());
+        doctor.setAddress(new Address(
+            dto.getAddress().getNeighborhood(), 
+            dto.getAddress().getStreet(), 
+            dto.getAddress().getNumber(), 
+            dto.getAddress().getCity(), 
+            dto.getAddress().getState(), 
+            dto.getAddress().getZipCode(), 
+            dto.getAddress().getComplement()));
         return doctor;
     }
 }

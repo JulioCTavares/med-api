@@ -2,6 +2,8 @@ package com.github.julioctavares.study_api.dto.doctor;
 
 import java.util.UUID;
 
+import com.github.julioctavares.study_api.entities.Address;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -16,5 +18,5 @@ public class DoctorResponseDTO {
     private String specialty;
     private String crm;
     private String phone;
-    private String address;
+    private Address address;
 }

@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -44,8 +45,8 @@ public class Doctor {
     @Column(name = "phone", nullable = false)
     private String phone;
 
-    @Column(name = "address", nullable = true)
-    private String address;
+    @Embedded
+    private Address address;
 
     @Column(name = "created_at", nullable = false)
     private LocalDateTime createdAt;

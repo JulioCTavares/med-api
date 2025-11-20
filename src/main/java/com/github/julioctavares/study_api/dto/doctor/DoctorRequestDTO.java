@@ -1,5 +1,7 @@
 package com.github.julioctavares.study_api.dto.doctor;
 
+import com.github.julioctavares.study_api.entities.Address;
+
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -30,7 +32,5 @@ public class DoctorRequestDTO {
     @NotBlank(message = "Telefone é obrigatório")
     @Size(min = 3, max = 100, message = "Telefone deve ter entre 3 e 100 caracteres")
     private String phone;
-    @NotBlank(message = "Endereço é obrigatório")
-    @Size(min = 3, max = 100, message = "Endereço deve ter entre 3 e 100 caracteres")
-    private String address;
+    private Address address;
 }
