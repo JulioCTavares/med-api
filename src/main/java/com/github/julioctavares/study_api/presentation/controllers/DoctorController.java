@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.github.julioctavares.study_api.application.dtos.doctor.DoctorRequestDTO;
 import com.github.julioctavares.study_api.application.dtos.doctor.DoctorResponseDTO;
 import com.github.julioctavares.study_api.application.services.doctor.CreateDoctorService;
-import com.github.julioctavares.study_api.domain.entities.exceptions.EntityAlreadyExistsException;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
