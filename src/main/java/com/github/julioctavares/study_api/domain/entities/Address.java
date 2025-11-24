@@ -1,4 +1,4 @@
-package com.github.julioctavares.study_api.entities;
+package com.github.julioctavares.study_api.domain.entities;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;

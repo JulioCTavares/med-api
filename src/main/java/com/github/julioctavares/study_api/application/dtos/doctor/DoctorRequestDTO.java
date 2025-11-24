@@ -1,6 +1,6 @@
-package com.github.julioctavares.study_api.dto.doctor;
+package com.github.julioctavares.study_api.application.dtos.doctor;
 
-import com.github.julioctavares.study_api.entities.Address;
+import com.github.julioctavares.study_api.domain.entities.Address;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

@@ -1,4 +1,4 @@
-package com.github.julioctavares.study_api.controllers;
+package com.github.julioctavares.study_api.presentation.controllers;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

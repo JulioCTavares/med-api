@@ -1,14 +1,14 @@
-package com.github.julioctavares.study_api.services.doctor;
+package com.github.julioctavares.study_api.application.services.doctor;
 
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
 
-import com.github.julioctavares.study_api.config.exceptions.EntityAlreadyExistsException;
-import com.github.julioctavares.study_api.dto.doctor.DoctorRequestDTO;
-import com.github.julioctavares.study_api.dto.doctor.DoctorResponseDTO;
-import com.github.julioctavares.study_api.entities.Address;
-import com.github.julioctavares.study_api.entities.Doctor;
-import com.github.julioctavares.study_api.repositories.DoctorRepository;
+import com.github.julioctavares.study_api.domain.entities.Address;
+import com.github.julioctavares.study_api.domain.entities.Doctor;
+import com.github.julioctavares.study_api.domain.entities.exceptions.EntityAlreadyExistsException;
+import com.github.julioctavares.study_api.domain.repositories.DoctorRepository;
+import com.github.julioctavares.study_api.application.dtos.doctor.DoctorRequestDTO;
+import com.github.julioctavares.study_api.application.dtos.doctor.DoctorResponseDTO;
 
 import lombok.RequiredArgsConstructor;
 

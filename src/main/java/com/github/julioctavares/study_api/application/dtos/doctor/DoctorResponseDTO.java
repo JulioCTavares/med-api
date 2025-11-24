@@ -1,8 +1,8 @@
-package com.github.julioctavares.study_api.dto.doctor;
+package com.github.julioctavares.study_api.application.dtos.doctor;
 
 import java.util.UUID;
 
-import com.github.julioctavares.study_api.entities.Address;
+import com.github.julioctavares.study_api.domain.entities.Address;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
